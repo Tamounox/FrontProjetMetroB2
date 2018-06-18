@@ -1,0 +1,370 @@
+
+html,
+body {
+  color: #681;
+  background: #def;
+  min-width: 700px;
+}
+.flexbox{
+  height: 100%;
+}
+/* ---- Timeline ---- */
+ol {
+  position: relative;
+  display: block;
+  margin: 5% auto;
+  padding-left: 4px;
+  padding-top: 1em;
+  padding-bottom: 4em;
+  width: 10px;
+  background-color: rgb(255, 208, 0);
+
+}
+/* ---- Timeline elements ---- */
+li {
+  position: relative;
+  top: 2.5em;
+  display: inline-block;
+  left: 3em;
+  height: 4em;
+  width: 20em;
+  font: bold 20px arial;
+  /* ---- Details ---- */
+}
+li::before {
+  content: "";
+  position: absolute;
+  top: -0.2em;
+  left: -3.7em;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #526512;
+  border-radius: 16px;
+}
+li.saint-michel::before {
+  background-color: lightblue;
+}
+li.opera::before {
+  background-color: green;
+}
+li.cityhall::before {
+  background-color: yellow;
+}
+li.catacombes::before {
+  background-color: red;
+}
+li.grands-boulevards::before {
+  background-color: orange;
+}
+
+li.ligneB::before {
+  background-color: blue;
+}
+li aside {
+  display: none;
+  position: absolute;
+  width: 10em;
+  left: -18em;
+  top: -0.8em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 128, 0.1);
+  border-left: 2px solid rgba(0, 0, 128, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 128, 0.1);
+  font: 16px Georgia;
+  background: #eee;
+}
+
+.ligneB aside {
+  display: none;
+  position: absolute;
+  width: 10em;
+  left: -2em;
+  top: -8em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 128, 0.1);
+  border-left: 2px solid rgba(0, 0, 128, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 128, 0.1);
+  font: 16px Georgia;
+  background: #eee;
+}
+.ligneB aside::before {
+  justify-items: center;
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 105%;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+}
+.ligneB {
+  position: relative;
+  top: 2em;
+  display: inline-block;
+  left: 3em;
+  height: 4em;
+  width: 10em;
+  font: bold 20px arial;
+  /* ---- Details ---- */
+}
+.ligneB::before {
+  content: "";
+  position: absolute;
+  top: -2.5em;
+  left: 2em;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #526512;
+  border-radius: 16px;
+}
+
+
+li aside::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 43%;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: rgba(0, 0, 0, 0.1);
+  margin-top: -5px;
+}
+/* ---- Hover effects ---- */
+li:hover {
+  cursor: pointer;
+  color: #28e;
+}
+li:hover::before {
+  border-color: #28e;
+}
+li:hover aside {
+  display: block;
+  color: #0c559e;
+}
+
+.horizontal{
+  display: flex;
+  
+  height: 10px;
+  width: 100%;
+  background: rgb(192, 0, 0);
+
+  padding-left: 4px;
+  // margin-top: -148px;
+  // margin-bottom: -80px;
+}
+
+.station1{
+  margin-left: 0;
+}
+
+.flexbox{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexbox2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2:nth-child(2){
+  width: 10%;
+}
+.section:nth-child(3){
+margin-top: -50px;
+}
+.section:nth-child(1){
+  margin-bottom: -90px;
+  top: 0;
+  }
+.jeanjau {
+  height: 110px;
+  background-color: rgb(255, 208, 0);
+  width: 10px;
+  position: absolute;
+  margin-left: 84px;
+}
+
+
+.jeanjau .ligneB{
+  left: -2.5em;
+
+}
+.jeanjau .ligneB::before{
+  top: -2.5em;
+
+}
+
+
+
+
+
+// $background: #333;
+// $border: #111;
+// $success-color: #1d9099;
+// $pending-color:lighten(desaturate($success-color, 30%), 40%);
+// body {
+//   background:$background;
+//   padding:0;
+//   margin:0;
+// }
+
+// .progress-details, .progress-borders {
+//   position:absolute;
+//   width:80%;
+//   left:10%;
+//   top:50%;
+//   height:0;
+//   display:flex;
+//   justify-content:space-between;
+//   align-items:center;
+// }
+
+// .progress-borders {
+//   z-index:1;
+//   .progress-step {
+//     stroke: $border;
+//   }
+// }
+
+// .progress-details {
+//   z-index:3;
+//   .progress-step {
+//     fill:$pending-color;
+//     &.active {
+//       fill:$success-color;
+//     }
+//   }
+// }    
+
+// .progress-step {
+//   height:60px;
+//   width:60px;
+//   display:block;
+//   border-radius:80px;
+//   z-index:2;
+// }
+
+// .progress-transit {
+//   position:absolute;
+//   top:50%;
+//   left:10%;
+//   width:80%;
+//   .progress-step-transit, .progress-step-transit-border {
+//     @extend .progress-step;
+//     position:absolute;
+//     top:50%;
+//     transform:translate(0, -50%);
+//     transition: left .5s ease-in-out;
+//   }
+
+//   .progress-step-transit {
+//     z-index:4;
+//     fill:$success-color
+//   }
+
+//   .progress-step-transit-border {
+//     z-index:1;
+//     stroke:$border;
+//   }
+// }
+
+
+// .progress-empty {
+//   position:absolute;
+//   width:calc(80% - 60px);
+//   left:calc(10% + 30px);
+//   height:20px;
+//   top: calc(50% - 10px);
+//   fill: $pending-color;
+//   z-index:2;
+// }
+
+// .progress-empty-border {
+//   @extend .progress-empty;
+//   stroke:$border;
+//   z-index:1;
+// }
+
+// svg.progress-check {
+//   height:60px;
+//   width:60px;
+//   position:absolute;
+//   top:50%;
+//   right:10%;
+//   transform: translate(0, -50%) scale(0);
+//   fill: $pending-color;
+//   z-index:4;
+// }
+
+// .progress-indicator-container{
+//   @extend .progress-empty;
+//   svg {
+//     fill:$success-color;
+//     height:100%;
+//     transition:width .5s ease-in-out;
+//   }
+// }
+// @mixin steps($step) {
+//   [data-step="#{$step}"] {         
+//     .progress-indicator-container svg { width: percentage(($step - 1) / 3) }
+//     @if $step > 1 {
+//       .progress-step-transit, .progress-step-transit-border { left: calc(#{percentage(($step - 1) / 3)} - #{($step - 1) * 20}px) }
+//     } @else {
+//       .progress-step-transit, .progress-step-transit-border { left: 0 }
+//     }
+//     @for $x from 1 through $step {
+//         svg.progress-step#{$x} { fill: $success-color; transition-delay: .5s; }
+//       }
+//   }
+// }
+
+// @include steps(1);
+// @include steps(2);
+// @include steps(3);
+// @include steps(4);
+
+// .next {
+//   position: absolute;
+//   right:0;
+//   bottom:0;
+// }
+
+// .prev {
+//   position:absolute;
+//   left:0;
+//   bottom:0;
+// }
+
+// @keyframes bounce {
+//     0%   { transform: translate(0, -50%) scale(0); }
+//     50%  {transform: translate(0, -50%) scale(1);}
+//     60%  {transform: translate(0, -50%) scale(.1);}
+//     70% {transform: translate(0, -50%) scale(.8);}
+//     80% {transform: translate(0, -50%) scale(.3);}
+//     90% {transform: translate(0, -50%) scale(.6);}
+//     100% {transform: translate(0, -50%) scale(.5);}
+// }
+
+// button {
+//   margin:30px;
+//   padding:10px 20px;
+//   cursor:pointer;
+//   color:$success-color;
+//   border:$border solid 4px;
+//   font-size:20px;
+//   font-weight:bold;
+//   background:$pending-color;
+// }
